@@ -73,7 +73,7 @@ func task3() {
 	const atmBanknoteDenomination = 100
 	const maxPossibleWithdrawSum = 100_000
 
-	if enteredSum < atmBanknoteDenomination || enteredSum > maxPossibleWithdrawSum {
+	if enteredSum < atmBanknoteDenomination || enteredSum % atmBanknoteDenomination != 0 || enteredSum > maxPossibleWithdrawSum  {
 		fmt.Printf("Сумма не может быть меньше %d рублей и больше %d рублей\n", atmBanknoteDenomination, maxPossibleWithdrawSum)
 	} else {
 		fmt.Println("Операция успешно выполнена.")
